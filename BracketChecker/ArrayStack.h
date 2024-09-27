@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #define MAX_STACK_SIZE	100
 
-inline void error(char* str) {
-	fprintf(stderr, "%s\n", str);
+void error(const char* msg) {
+	fprintf(stderr, "%s\n", msg);
 	exit(1);
 };
 
@@ -20,24 +20,24 @@ public:
 	bool isFull() { return top == MAX_STACK_SIZE - 1; }
 
 	void push(int e) {
-		if (isFull()) error("½ºÅÃ Æ÷È­ ¿¡·¯");
+		if (isFull()) error("ìŠ¤íƒ í¬í™” ì—ëŸ¬");
 		data[++top] = e;
 	}
 
 	int pop() {
-		if (isEmpty()) error("½ºÅÃ °ø¹é ¿¡·¯");
+		if (isEmpty()) error("ìŠ¤íƒ ê³µë°± ì—ëŸ¬");
 		return data[top--];
 	}
 
 	int peek() {
-		if (isEmpty()) error("½ºÅÃ °ø¹é ¿¡·¯");
+		if (isEmpty()) error("ìŠ¤íƒ ê³µë°± ì—ëŸ¬");
 		return data[top];
 	}
 
 	void display() {
-		printf("[½ºÅÃ Ç×¸ñÀÇ ¼ö = %2d] ==> ", top + 1);
+		printf("[ìŠ¤íƒ ìš”ì†Œì˜ ìˆ˜= %2d] ==> ", top + 1);
 		for (int i = 0; i <= top; i++)
-			printf("<%2d>", data[i]);
+			printf("%2c", data[i]);
 		printf("\n");
 	}
 };

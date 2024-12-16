@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12장-WGraphMST", "12장-WGraphMST\12장-WGraphMST.vcxproj", "{93F415A0-4A01-4CC0-82E5-012D18A70980}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12장-ShortestPathDijkstra", "12장-ShortestPathDijkstra\12장-ShortestPathDijkstra.vcxproj", "{84DE8D3D-B52A-4330-917D-B4E04278DA43}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12장-ShortestPathFloyd", "12장-ShortestPathFloyd\12장-ShortestPathFloyd.vcxproj", "{5A6DF7D5-389F-4C35-AFC0-7C2B1021799A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93F415A0-4A01-4CC0-82E5-012D18A70980}.Debug|Win32.ActiveCfg = Debug|Win32
+		{93F415A0-4A01-4CC0-82E5-012D18A70980}.Debug|Win32.Build.0 = Debug|Win32
+		{93F415A0-4A01-4CC0-82E5-012D18A70980}.Release|Win32.ActiveCfg = Release|Win32
+		{93F415A0-4A01-4CC0-82E5-012D18A70980}.Release|Win32.Build.0 = Release|Win32
+		{84DE8D3D-B52A-4330-917D-B4E04278DA43}.Debug|Win32.ActiveCfg = Debug|Win32
+		{84DE8D3D-B52A-4330-917D-B4E04278DA43}.Debug|Win32.Build.0 = Debug|Win32
+		{84DE8D3D-B52A-4330-917D-B4E04278DA43}.Release|Win32.ActiveCfg = Release|Win32
+		{84DE8D3D-B52A-4330-917D-B4E04278DA43}.Release|Win32.Build.0 = Release|Win32
+		{5A6DF7D5-389F-4C35-AFC0-7C2B1021799A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5A6DF7D5-389F-4C35-AFC0-7C2B1021799A}.Debug|Win32.Build.0 = Debug|Win32
+		{5A6DF7D5-389F-4C35-AFC0-7C2B1021799A}.Release|Win32.ActiveCfg = Release|Win32
+		{5A6DF7D5-389F-4C35-AFC0-7C2B1021799A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

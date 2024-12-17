@@ -1,10 +1,10 @@
 #pragma once
-// WGraphFloyd.h: Floyd ¾Ë°í¸®ÁòÀÇ ÃÖ´Ü °æ·Î Å½»ö ±â´ÉÀÌ Ãß°¡µÈ ±×·¡ÇÁ
+// WGraphFloyd.h: Floyd ï¿½Ë°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ Å½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½
 #include "WGraph.h"
 class WGraphFloyd : public WGraph
 {
 public:
-	static int	A[MAX_VTXS][MAX_VTXS];		// ÃÖ´Ü°æ·Î °Å¸®
+	static int	A[MAX_VTXS][MAX_VTXS];		// ï¿½Ö´Ü°ï¿½ï¿½ ï¿½Å¸ï¿½
 	void ShortestPathFloyd() {
 		for (int i = 0; i<size; i++)
 			for (int j = 0; j<size; j++)

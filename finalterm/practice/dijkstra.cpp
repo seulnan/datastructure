@@ -27,6 +27,7 @@ void insertVertex(char name) {
 void insertEdge( int u, int v, int weight ) {
 		if( weight == INF ) weight = INF;
 		setEdge(u, v, weight);
+        setEdge(v, u, weight);
 	}    
 
 // WGraphDijkstra 클래스
@@ -118,6 +119,54 @@ public:
 	// }
 };
 
+// Floyd 알고리즘 클래스
+class WGraphFloyd {
+    int A[MAX_VTXS][MAX_VTXS]; // 최단 거리 행렬
+
+public:
+    // Floyd 알고리즘 실행
+    void ShortestPathFloyd() {
+        // 초기화: 인접 행렬 값 복사
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                A[i][j] = getEdge(i, j);
+            }
+        }
+
+        // Floyd 알고리즘
+        for (int k = 0; k < size; k++) {
+            for (int i = 0; i < size; i++) {
+                for (int j = 0; j < size; j++) {
+                    if (A[i][k] != INF && A[k][j] != INF && A[i][k] + A[k][j] < A[i][j]) {
+                        A[i][j] = A[i][k] + A[k][j];
+                    }
+                }
+            }
+        }
+    }
+
+    // 최단 거리 행렬 출력
+    void printA() {
+        printf("====================================\n");
+        printf("     ");
+        for (int i = 0; i < size; i++) {
+            printf("%3c  ", getVertex(i));
+        }
+        printf("\n");
+        for (int i = 0; i < size; i++) {
+            printf("%3c  ", getVertex(i));
+            for (int j = 0; j < size; j++) {
+                if (A[i][j] == INF)
+                    printf(" INF ");
+                else
+                    printf("%5d", A[i][j]);
+            }
+            printf("\n");
+        }
+    }
+};
+
+
 int main() {
     // 초기화: 인접 행렬을 INF로 설정
     for (int i = 0; i < MAX_VTXS; i++) {
@@ -154,6 +203,14 @@ int main() {
 
     printf("\n경로 출력 (A -> D):\n");
     graph.PrintPath(0, 3); // A -> D 경로 출력
+
+    // Floyd 알고리즘 실행
+    WGraphFloyd graphFloyd;
+    graphFloyd.ShortestPathFloyd();
+
+    // 최단 거리 행렬 출력
+    printf("\n모든 정점 쌍 최단 거리 행렬:\n");
+    graphFloyd.printA();
 
     return 0;
 }
